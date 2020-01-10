@@ -11,7 +11,7 @@ class VenueList extends Component {
         this.props.getItems();
     }
 
-    onDeleteClick = () => {
+    onDeleteClick = id => {
         this.props.deleteItem(id);
     }
 
@@ -19,7 +19,7 @@ class VenueList extends Component {
         const { items } = this.props.item;
         return (
             <Container>
-                <Button
+                {/* <Button
                     color="dark"
                     style={{marginBottom: '2rem'}}
                     onClick={() =>{
@@ -31,17 +31,17 @@ class VenueList extends Component {
                         }
                     }}
                 >Add item 
-                </Button>
+                </Button> */}
                 <ListGroup>
                     <TransitionGroup className="venue-list">
-                        {items.map(({id, name}) =>(
-                            <CSSTransition key={id} timeout={500} classNames="fade">
+                        {items.map(({_id, name}) =>(
+                            <CSSTransition key={_id} timeout={500} classNames="fade">
                                 <ListGroupItem>
                                     <Button
                                         className="remove-btn"
                                         color="danger"
                                         size="sm"
-                                        onClick={this.onDeleteClick.bind(this, id)}
+                                        onClick={this.onDeleteClick.bind(this, _id)}
                                     >&times;</Button>
                                     {name}
                                 </ListGroupItem>
