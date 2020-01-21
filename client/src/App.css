@@ -1,6 +1,45 @@
+
+.remove-btn{
+    margin-right: 0.5rem;
+}
+
+.fade-enter{
+    opacity: 0.01;
+}
+
+.fade-enter-active{
+    opacity: 1;
+    transition: opacity 1000ms ease-in;
+}
+
+.fade-exit{
+    opacity: 1;
+}
+
+.fade-exit-active{
+    opacity: 0.01;
+    transition: opacity 1000ms ease-in;
+}
+.text-divider{
+    margin: 2em 0;
+    line-height: 0; 
+    text-align: center;
+}
+.text-divider span{
+    background-color: #fff; 
+    padding: 1em;
+    font-size:0.9rem;
+    color: #bdb9b9;
+}
+
+.text-divider:before{ 
+    content: " "; 
+    display: block; 
+    border-top: 1px solid #e3e3e3; 
+    border-bottom: 1px solid #f7f7f7;
+}
 .App {
     font-family: sans-serif;
-    text-align: center;
   }
   
   .footer {
@@ -63,3 +102,4 @@
     background-color: #F4FCFC;
     font-weight: bold;
   }
+
