@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import AppNavbar from './components/AppNavbar';
+import Partner from "./components/Our-Partners";
+import Footer from "./components/Footer";
 import VenueList from './components/VenueList';
 import ItemModal from './components/itemModal'; 
 import { Container } from 'reactstrap';
@@ -21,6 +23,8 @@ class App extends Component {
         <Container>
           <ItemModal />
           <VenueList />
+          <Partner />
+          <Footer />
         </Container>
         
         
@@ -28,6 +32,6 @@ class App extends Component {
       </Provider>
     );
   }
-}
 
 export default App;
+
