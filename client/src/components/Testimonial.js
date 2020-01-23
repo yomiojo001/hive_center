@@ -3,7 +3,7 @@ import React from 'react'
 const Testimonial = (props) => {
     return (
         <div>
-            <section class="mw5 mw7-ns center  pa3 ph5-ns">
+            <section className="mw5 mw7-ns center  pa3 ph5-ns">
               <div className="carousel-of-quotes items-center">
                         <div className="flex justify-center ">
                             <div className="pa4">
