@@ -5,6 +5,7 @@ import {
   } from 'reactstrap';
 import '../Banner.css'
 
+
 export default class Hwork extends Component {
     render() {
         return (
@@ -14,22 +15,22 @@ export default class Hwork extends Component {
                 </div>
                 <Container>
                 <CardDeck>
-                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)"}}>
-                        <CardImg top src="/assets/256x186.svg" alt="Card image cap" />
+                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)",}}>
+                        <CardImg src={require("../img/search.svg")} alt="search svg" className="card-img" />
                         <CardBody>
                         <CardTitle>Search</CardTitle>
                         <CardText>with a single click, choose your preferred location</CardText>
                         </CardBody>
                     </Card>
                     <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)"}}>
-                        <CardImg top src="/assets/256x186.svg" alt="Card image cap" />
+                        <CardImg src={require("../img/book.svg")} alt="book svg" className="card-img" />
                         <CardBody>
                         <CardTitle>Book</CardTitle>
                         <CardText>select a booking day of your choice</CardText>
                         </CardBody>
                     </Card>
                     <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)"}}>
-                        <CardImg top src="/assets/256x186.svg" alt="Card image cap" />
+                        <CardImg src={require("../img/pay.svg")} alt="pay svg" className="card-img" />
                         <CardBody>
                         <CardTitle>Pay</CardTitle>
                         <CardText>make your payment to confirm your booking</CardText>
