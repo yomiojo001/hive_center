@@ -5,7 +5,8 @@ import {
     ModalBody,
     Form,
     FormGroup,
-    Input
+    Input,
+    Container
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addItem } from '../actions/itemActions';
@@ -55,13 +56,14 @@ class ItemModal extends Component{
                 toggle={this.toggle}
                 >
                     <button type="button" style={{border:"0", backgroundColor:"#fff",fontSize:"1.8rem",color:"ccc" }} class="close" onClick={this.toggle} className="ml-auto" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <Container>
                     <ModalBody>
                         <Form onSubmit={this.onSubmit}>
                             <FormGroup>
                                 
                                 <Button
                                     color="primary"
-                                    style={{marginTop: '0.7rem'}}
+                                    style={{marginTop: '0.5rem'}}
                                     block
                                 >Continue with facebook</Button>
                                 <Button
@@ -113,6 +115,7 @@ class ItemModal extends Component{
                             </div>
                         </Form>
                     </ModalBody>
+                    </Container>
                 </Modal>
             </div>
         );
