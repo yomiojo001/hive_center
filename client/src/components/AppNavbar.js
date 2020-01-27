@@ -7,7 +7,6 @@ import {
     Nav,
     NavLink,
     Container,
-    Button
 } from 'reactstrap';
 import RegisterModal from './registerModal';
 import SignInModal from './signInModal';
@@ -31,7 +30,7 @@ export default class AppNavbar extends Component {
     render() {
         return (
             <div>
-               <Navbar color="light" light expand="sm" className="mb-5">
+               <Navbar color="light" light expand="sm" fixed="top">
                     <Container>
                         <NavbarBrand href="/"  >HIVE<small>center</small></NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
