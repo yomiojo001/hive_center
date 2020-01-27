@@ -18,7 +18,7 @@ export default function BannerButtons () {
                         <StateDropdown />
                         <LocationDropdown />
                         <DateModal />
-                        <Button color="primary px-3">Search</Button>
+                        <Button color="primary px-5">Search</Button>
                     </ButtonGroup>
                 </Form>
             </div> 

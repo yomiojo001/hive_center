@@ -26,7 +26,7 @@ export default class DateModal extends Component {
         return (
             <div>
                 <Button
-                    className="btn-md px-4 text-dark mr-2"
+                    className="btn-md px-5 text-dark mr-2"
                     onClick={this.toggle}
                     style={{backgroundColor:"white"}}
                 >Date</Button>
