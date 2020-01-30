@@ -15,7 +15,7 @@ export default class Hwork extends Component {
                 </div>
                 <Container>
                 <CardDeck>
-                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)"}}>
+                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)", border:"0", boxShadow: "rgba(162, 157, 157, 0.18) 1px 2px 3px 6px"}}>
                         
                         <CardImg src={require("../img/search.svg")} alt="search svg" width="50%" height="30%" className="mt-3"  />
                         
@@ -24,7 +24,7 @@ export default class Hwork extends Component {
                         <CardText>With a single click, choose your preferred location</CardText>
                         </CardBody>
                     </Card>
-                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)"}}>
+                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)", border:"0", boxShadow: "rgba(162, 157, 157, 0.18) 1px 2px 3px 6px"}}>
                         
                         <CardImg src={require("../img/book.svg")} alt="book svg" width="50%" height="30%" className="mt-3"  />
                         
@@ -33,7 +33,7 @@ export default class Hwork extends Component {
                         <CardText>Select a booking day of your choice</CardText>
                         </CardBody>
                     </Card>
-                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)"}}>
+                    <Card style={{textAlign:"center", backgroundColor:"rgb(181, 236, 236)", border:"0", boxShadow: "rgba(162, 157, 157, 0.18) 1px 2px 3px 6px"}}>
                         
                         <CardImg src={require("../img/pay.svg")} alt="pay svg" width="50%" height="30%" className="mt-3"/>
                         
