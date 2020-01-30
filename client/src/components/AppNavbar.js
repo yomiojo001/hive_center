@@ -8,8 +8,9 @@ import {
     NavLink,
     Container,
 } from 'reactstrap';
-import RegisterModal from './registerModal';
+import RegisterModal from './auth/registerModal';
 import SignInModal from './signInModal';
+import Logout from './auth/Logout';
 
 export default class AppNavbar extends Component {
     toggle(){
@@ -37,10 +38,10 @@ export default class AppNavbar extends Component {
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavLink href="#" className="mr-5">Home</NavLink> <NavLink href="#" className="mr-5">Venue</NavLink> <NavLink href="#" className="mr-5">Company</NavLink>
-                            {/* <Button color="info" className="mr-3 btn-sm">Register</Button>
-                            <Button color="info" outline className="btn-sm">Sign in</Button> */}
                             <RegisterModal />
+                            <Logout />
                             <SignInModal />
+                            
                             </Nav>
                         </Collapse>
                     </Container>

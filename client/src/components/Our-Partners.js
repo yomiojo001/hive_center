@@ -6,7 +6,7 @@ import '../PatFooter.css';
 
 export default function Partner() {
   return(
-    <div className="partner" style={{textAlign: "center" }}>   
+    <div className="partner mt-4" style={{textAlign: "center" }}>   
       <Row className="partn">
         <Col className="h3-bg">
           <h3>Our Partners</h3>

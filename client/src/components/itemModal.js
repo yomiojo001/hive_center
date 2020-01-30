@@ -51,7 +51,7 @@ class ItemModal extends Component{
                 color="dark"
                 style={{marginBottom: '2rem'}}
                 onClick={this.toggle}
-                >Add Item</Button>
+                >Add Venue</Button>
 
                 <Modal
                 isOpen={this.state.modal}
