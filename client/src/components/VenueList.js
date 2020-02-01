@@ -43,7 +43,7 @@ class VenueList extends Component {
                         {items.map(({_id, name}) =>(
                             <CSSTransition key={_id} timeout={500} classNames="fade">
                                 <ListGroupItem>
-                                    { isAuthenticated ? <Button
+                                    { this.props.isAuthenticated ? <Button
                                         className="remove-btn"
                                         color="danger"
                                         size="sm"

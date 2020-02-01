@@ -32,7 +32,7 @@ class App extends Component {
         <Banner />
         <Hwork />
           {/* <ItemModal />
-          <VenueList /> */}
+           <VenueList /> */}
         <LandingPage />
         <Partner />
         <Footer />     
