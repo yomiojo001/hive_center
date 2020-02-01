@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import {
     Collapse,
     Navbar,
@@ -7,12 +7,20 @@ import {
     Nav,
     NavLink,
     Container,
+    NavItem
 } from 'reactstrap';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import RegisterModal from './auth/registerModal';
-import SignInModal from './signInModal';
+import SignInModal from './auth/signInModal';
 import Logout from './auth/Logout';
 
-export default class AppNavbar extends Component {
+class AppNavbar extends Component {
+
+    static propTypes = {
+        auth: PropTypes.object.isRequired
+    }
+
     toggle(){
         this.setState({
             isOpen: !this.state.isOpen
@@ -29,6 +37,26 @@ export default class AppNavbar extends Component {
     
 
     render() {
+        const { isAuthenticated, user } = this.props.auth;
+
+        const authLinks = (
+            <Fragment>
+                <NavItem className="mr-3">
+                    <span className="navbar-text mt-2"></span>
+                    <strong>{ user ? `Welcome ${user.name}` : '' }</strong>
+                </NavItem>
+                <Logout />
+            </Fragment>
+        )
+
+        const guestLinks = (
+            <Fragment>
+                <RegisterModal />
+                <SignInModal />
+            </Fragment>
+        )
+
+
         return (
             <div>
                <Navbar color="light" light expand="sm" fixed="top">
@@ -37,10 +65,8 @@ export default class AppNavbar extends Component {
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
-                            <NavLink href="#" className="mr-5">Home</NavLink> <NavLink href="#" className="mr-5">Venue</NavLink> <NavLink href="#" className="mr-5">Company</NavLink>
-                            <RegisterModal />
-                            <Logout />
-                            <SignInModal />
+                                <NavLink href="#" className="mr-5">Home</NavLink> <NavLink href="#" className="mr-5">Venue</NavLink> <NavLink href="#" className="mr-5">Company</NavLink>
+                                { isAuthenticated ? authLinks: guestLinks}
                             
                             </Nav>
                         </Collapse>
@@ -50,3 +76,9 @@ export default class AppNavbar extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(mapStateToProps, null)(AppNavbar)

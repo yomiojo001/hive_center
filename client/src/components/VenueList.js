@@ -6,7 +6,13 @@ import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
 
 class VenueList extends Component {
-    
+    static propTypes = {
+        getItems: PropTypes.func.isRequired,
+        item: PropTypes.object.isRequired,
+        isAuthenticated: PropTypes.bool
+    }
+
+
     componentDidMount(){
         this.props.getItems();
     }
@@ -37,6 +43,12 @@ class VenueList extends Component {
                         {items.map(({_id, name}) =>(
                             <CSSTransition key={_id} timeout={500} classNames="fade">
                                 <ListGroupItem>
+                                    { isAuthenticated ? <Button
+                                        className="remove-btn"
+                                        color="danger"
+                                        size="sm"
+                                        onClick={this.onDeleteClick.bind(this, _id)}
+                                    >&times;</Button> : null}
                                     <Button
                                         className="remove-btn"
                                         color="danger"
@@ -53,13 +65,11 @@ class VenueList extends Component {
         )
     }
 }
-VenueList.propTypes = {
-    getItems: PropTypes.func.isRequired,
-    item: PropTypes.object.isRequired
-}
+
 
 const mapStateToProps = (state) => ({
-    item: state.item
+    item: state.item,
+    isAuthenticated: state.auth.isAuthenticated
 })
 
 export default connect(mapStateToProps, { getItems, deleteItem })(VenueList);

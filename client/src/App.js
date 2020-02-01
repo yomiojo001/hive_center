@@ -7,7 +7,6 @@ import Partner from "./components/Our-Partners";
 import Footer from "./components/Footer";
 import VenueList from './components/VenueList';
 import ItemModal from './components/itemModal'; 
-import { Container } from 'reactstrap';
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -32,10 +31,8 @@ class App extends Component {
         <AppNavbar />
         <Banner />
         <Hwork />
-        <Container>
           {/* <ItemModal />
           <VenueList /> */}
-        </Container>
         <LandingPage />
         <Partner />
         <Footer />     
