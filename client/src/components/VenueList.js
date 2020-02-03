@@ -49,12 +49,7 @@ class VenueList extends Component {
                                         size="sm"
                                         onClick={this.onDeleteClick.bind(this, _id)}
                                     >&times;</Button> : null}
-                                    <Button
-                                        className="remove-btn"
-                                        color="danger"
-                                        size="sm"
-                                        onClick={this.onDeleteClick.bind(this, _id)}
-                                    >&times;</Button>
+                                    
                                     {name}
                                 </ListGroupItem>
                             </CSSTransition>
