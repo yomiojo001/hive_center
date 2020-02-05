@@ -1,1 +1,1 @@
-<h2>HIVE CEENTER</h2>
+<h2>HIVE CENTER</h2>
