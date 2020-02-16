@@ -65,7 +65,7 @@ class AppNavbar extends Component {
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
-                                <NavLink href="/" className="mr-5">Home</NavLink> <NavLink href="/venue" className="mr-5">Venue</NavLink> <NavLink href="/company" className="mr-5">Company</NavLink>
+                                <NavLink href="/" className="mr-5" active>Home</NavLink> <NavLink href="/venue" className="mr-5">Venue</NavLink> <NavLink href="/company" className="mr-5">Company</NavLink>
                                 { isAuthenticated ? authLinks: guestLinks}
                             
                             </Nav>
