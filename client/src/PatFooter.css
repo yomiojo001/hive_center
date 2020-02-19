@@ -1,0 +1,72 @@
+.footer {
+    width: 100%;
+    background-color: black;
+    color: white; 
+    padding: 5em;
+  }
+  .first h3 {
+    text-align: left;
+  }
+  span {
+    color: #22BFBF;
+  }
+  small {
+    font-size: 20px;
+  }
+  .sub h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .sub a {
+    font-size: 13px;
+    color: white;
+  }
+  
+  .sub a:hover {
+    color: #22BFBF;
+    text-decoration: none;
+  }
+  .row2 {
+    text-align: left;
+  }
+  
+  .row3 p {
+    font-size: 11px; 
+    margin-left: 20px;
+  }
+  
+  .icon {
+    font-size: 22px;
+    margin: 10px;
+    color: white;
+  }
+  
+  .icon:hover {
+    color: #22BFBF;
+  }
+  img {
+  width: 100px;
+  }
+  .partn{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  div.partn.row{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .partner {
+    width: 100%; 
+  }
+
+  .h3-bg{
+    background-color: #F4FCFC;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .partn-height{
+    margin-top: 4rem;
+    height: 10rem;
+  }
