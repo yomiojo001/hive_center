@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import VenueList from './VenueList';
-import ItemModal from './itemModal';
+import Footer from "./Footer";
+
 
 export default class Company extends Component {
     render() {
@@ -14,10 +14,15 @@ export default class Company extends Component {
                 <br />
                 <br />
 
-                <h1>Company Page</h1>
-                
-                <ItemModal />
-                <VenueList />
+                <h1>About Page</h1>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <Footer />
             </div>
         )
     }

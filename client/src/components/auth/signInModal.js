@@ -12,6 +12,9 @@ import {
     Container,
     Alert
 } from 'reactstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../../actions/authActions';
@@ -134,12 +137,12 @@ class LoginModal extends Component{
                                     color="primary"
                                     style={{marginTop: '3rem'}}
                                     block
-                                >Continue with facebook</Button>
+                                ><FontAwesomeIcon icon={faFacebookF} className="icon"style={{color: "white"}}/><i>Continue with facebook</i></Button>
                                 <Button
                                     color="danger"
                                     style={{marginTop: '0.8rem'}}
                                     block
-                                >Continue with google</Button>
+                                ><FontAwesomeIcon icon={faGoogle} className="icon"style={{color: "white"}}/><i>Continue with google</i></Button>
                             </FormGroup>
                             <div style={{textAlign:"center", marginTop:"2.5rem"}} >
                             <small>Don't have an account?&nbsp;<a href="#">Register</a></small>

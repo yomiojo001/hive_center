@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AppNavbar from './components/AppNavbar';
 import Home from './components/Home';
 import Venue from './components/Venue';
-import Company from './components/Company';
+import About from './components/About';
 
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -30,7 +30,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/venue" component={Venue} />
-          <Route path="/company" component={Company} />
+          <Route path="/about" component={About} />
         </Switch>
       </div>
       </Router> 

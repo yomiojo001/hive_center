@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import faker from 'faker';
+import { Row, Col } from 'reactstrap';
 import Testimonial from './Testimonial';
 import Facility from './Facility';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import '../PatFooter.css';
 
 
 
@@ -32,12 +34,20 @@ export default class LandingPage extends Component {
    
     render() {
         return (
-            <div>
-               <h5 className="tc bg-light b">Our Facilities</h5>
+          <div className="partner mt-4" style={{textAlign: "center" }}>   
+          <Row className="partn">
+            <Col className="h3-bg">
+              <h3>Our Facilities</h3>
+            </Col>
+          </Row>
                           
                 <Carousel
-                showDots={true} 
-                responsive={responsive}>
+                showDots={false} 
+                responsive={responsive}
+                infinite={true}
+                autoPlay={true}
+                // autoPlay={this.props.deviceType !== "mobile" ? true : false}
+                autoPlaySpeed={4000}>
                            <Facility Location = "Ikeja, Lagos" Image ={faker.image.city()}/>                
                            <Facility Location = "Owerri" Image ={faker.image.city()}/>                                             
                            <Facility Location = "Wuse II, Abuja"  Image ={faker.image.city()}/>                                              
@@ -47,9 +57,9 @@ export default class LandingPage extends Component {
                             <Facility Location = "Ijebu, Osun"  Image ={faker.image.city()}/>                     
                  
                 
-                </Carousel>;           
+                </Carousel>          
                 
-                    <div className=" pa2 bg-light-gray">
+                    <div className=" pa2" style={{backgroundColor: '#F4FCFC'}}>
                             <Testimonial 
                             quote="Beautiful Images to use for all social and corporate functions.
                             Massive car park space which is different from the usual."

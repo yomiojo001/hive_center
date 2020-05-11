@@ -9,6 +9,10 @@ import {
     Container,
     Alert
 } from 'reactstrap';
+import signInModal from './signInModal'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { register } from '../../actions/authActions';
@@ -104,12 +108,12 @@ class RegisterModal extends Component{
                                     color="primary"
                                     style={{marginTop: '0.5rem'}}
                                     block
-                                >Continue with facebook</Button>
+                                ><FontAwesomeIcon icon={faFacebookF} className="icon"style={{color: "white"}}/><i>Continue with facebook</i></Button>
                                 <Button
                                     color="danger"
                                     style={{marginTop: '0.8rem'}}
                                     block
-                                >Continue with google</Button>
+                                ><FontAwesomeIcon icon={faGoogle} className="icon"style={{color: "white"}}/><i>Continue with google</i></Button>
                                 <p className="text-divider" ><span>Or continue with</span></p> 
                                 <Input 
                                     type="email"
@@ -150,7 +154,7 @@ class RegisterModal extends Component{
                                 
                             </FormGroup>
                             <div style={{textAlign:"center", marginTop:"2.5rem"}} >
-                            <small>Have an account?&nbsp;<a href="#">Sign in</a></small>
+                            <small>Have an account?&nbsp;<a href="/" onClick={() => (signInModal)}>Sign in</a></small>
                             </div>
                         </Form>
                     </ModalBody>

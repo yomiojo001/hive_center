@@ -14,7 +14,7 @@ const Testimonial = (props) => {
                                       <p className="content-center f7">{props.job}</p>
 
                                 </div>
-                                <img className="fr br-100" src={props.avatar} alt="Kolade "/>
+                                <img className="fr br-100 w-100" src={props.avatar} alt="Kolade "/>
                             </div>
                         
                        

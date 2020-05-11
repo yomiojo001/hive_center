@@ -61,11 +61,11 @@ class AppNavbar extends Component {
             <div>
                <Navbar color="light" light expand="sm" fixed="top">
                     <Container>
-                        <NavbarBrand href="/"  >HIVE<small>center</small></NavbarBrand>
+                        <NavbarBrand href="/"><span style={{color: '#22BFBF'}}>HIVE</span><small>center</small></NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
-                                <NavLink href="/" className="mr-5" active>Home</NavLink> <NavLink href="/venue" className="mr-5">Venue</NavLink> <NavLink href="/company" className="mr-5">Company</NavLink>
+                                <NavLink href="/" className="mr-5" active>Home</NavLink> <NavLink href="/about" className="mr-5">About</NavLink> <NavLink href="/venue" className="mr-5">Venue</NavLink> 
                                 { isAuthenticated ? authLinks: guestLinks}
                             
                             </Nav>
